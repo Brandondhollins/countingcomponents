@@ -1,0 +1,91 @@
+{
+    "display_information": {
+        "name": "Component Mention Counter",
+        "description": "The Component Mention Counter records the amount of times a component is mentioned in a specific Slack channel.",
+        "background_color": "#000000"
+    },
+    "features": {
+        "app_home": {
+            "home_tab_enabled": false,
+            "messages_tab_enabled": true,
+            "messages_tab_read_only_enabled": false
+        },
+        "bot_user": {
+            "display_name": "Component Mention Counter",
+            "always_online": true
+        },
+        "slash_commands": [
+            {
+                "command": "/listmentioned",
+                "description": "lists the number of times the component was mentioned",
+                "should_escape": false
+            }
+        ]
+    },
+    "oauth_config": {
+        "redirect_urls": [
+            "https://individualist.io/?code=5944024701728.6108487528320.5332a9ee86f8981c0c81c8183dff297c26f07c70db6355d1093ce35f53bfcf02&state="
+        ],
+        "scopes": {
+            "user": [
+                "channels:history",
+                "channels:read",
+                "im:history"
+            ],
+            "bot": [
+                "app_mentions:read",
+                "channels:history",
+                "channels:join",
+                "channels:manage",
+                "channels:read",
+                "chat:write",
+                "chat:write.customize",
+                "chat:write.public",
+                "files:read",
+                "files:write",
+                "groups:history",
+                "groups:read",
+                "groups:write",
+                "im:history",
+                "im:read",
+                "im:write",
+                "incoming-webhook",
+                "links:read",
+                "links:write",
+                "mpim:history",
+                "mpim:read",
+                "mpim:write",
+                "pins:read",
+                "pins:write",
+                "reactions:read",
+                "reactions:write",
+                "reminders:read",
+                "reminders:write",
+                "team:read",
+                "usergroups:read",
+                "usergroups:write",
+                "users.profile:read",
+                "users:read",
+                "users:write",
+                "commands"
+            ]
+        }
+    },
+    "settings": {
+        "event_subscriptions": {
+            "user_events": [
+                "message.channels"
+            ],
+            "bot_events": [
+                "app_mention",
+                "message.channels"
+            ]
+        },
+        "interactivity": {
+            "is_enabled": true
+        },
+        "org_deploy_enabled": false,
+        "socket_mode_enabled": true,
+        "token_rotation_enabled": false
+    }
+}
